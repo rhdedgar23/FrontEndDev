@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!--Not a tag. Tells the browser that this is an HTML5 file-->
+
+<html><!--Tells the browswer that everything inside this tag is html-->
+    <!--Inside the html tag, the text is divided into two sections. The head and the body-->
+
+    <head><!--Contains information about the website. Also, where you load CSS and JS files-->
+
+        <!--One of the first tags that should be in the head is the "meta" tag-->
+        <meta charset="utf-8"><!--utf-8 is a type of unicode encoding. We need to translate the letters, numbers and symbols into bytes that the computer undestands-->
+
+        <!--The second meta tag is for webpage responsiveness. Adjusts to whatever devie you're using-->
+        <meta name="viewport" content="with=devide-width, initial-scale-1">
+
+        <!--Title tag. Sets the website's title. It's shown in the website's tab-->
+        <title>My first website</title>
+    </head>
+    <body><!--Contains the main content of the webpage. Everything you see in the page is usually in the body tag-->
+
+        <h1>My First Website</h1><!--header tag; h1 generally used for the title of the page.-->
+        <h2>An HTML playground</h2>
+        <h3>An HTML playground</h3>
+        <h4>An HTML playground</h4>
+        <h5>An HTML playground</h5>
+        <h6>An HTML playground</h6>    
+
+        This is my first website and I'm so <b>excited!</b> <!--Opening and closing TAGS. They markup the code. Hence markup language--> 
+
+        <p><!--paragraph tag-->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed venenatis mi vel odio convallis luctus. 
+            Morbi sed purus eu mauris ornare vestibulum. 
+            Duis in ante et libero semper eleifend tincidunt non leo. 
+            Praesent iaculis quis turpis quis faucibus. 
+            Etiam semper tellus erat, pellentesque pellentesque tellus venenatis nec. 
+            Integer ac sapien lectus. 
+            Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+            Proin ex ipsum, vehicula sit amet efficitur eu, rhoncus feugiat justo. 
+            Integer eget felis at erat fringilla malesuada. 
+            Fusce sit amet congue lectus. 
+            Praesent tempus nibh a neque feugiat, a feugiat quam egestas. 
+            Ut posuere est a est viverra, vitae euismod metus varius. 
+            Etiam eget ornare leo. 
+            Proin metus lacus, interdum volutpat orci quis, mattis euismod turpis. 
+            Vivamus consectetur mi non viverra tempor.
+        </p>
+
+        <p>
+            Integer neque leo, accumsan ut maximus quis, facilisis a leo. 
+            Suspendisse ac maximus dolor, non rhoncus enim. 
+            Cras ut commodo nibh, ac malesuada nisi. 
+            Aenean cursus dapibus arcu, eu fringilla velit interdum et. 
+            Integer congue tortor ex, a sagittis lorem posuere at. 
+            Sed vel est vel massa vestibulum aliquet. 
+            Maecenas euismod libero est, nec ultricies purus feugiat sit amet. 
+            Phasellus ornare dignissim ipsum, at ornare nisi faucibus et. 
+            Phasellus tristique eget nisl eget aliquam.
+        </p>
+
+        <!--There are void elements (because they dont surround text; they have no content)
+        One example is the line break tag
+        There are also style tags, which style the text (not as used due to CSS)-->
+        <b>Phasellus tempor, metus in varius rutrum, nibh nisi elementum turpis, eget mattis leo libero dignissim turpis.</b><br><br><br>
+        <i>Proin a tincidunt lacus, nec congue libero.</i><br>
+        <u>Maecenas id tristique dolor.</u><br>
+        <em>Proin posuere ac est quis consequat.</em><br>
+        <strong>Mauris tincidunt justo ut sollicitudin hendrerit.</strong><br>
+        <hr><!--horizontal line-->
+
+        <!--The anchor tag "a" is used to make the selected text into a link.
+        It's called an anchor tag because it connects both website just as the anchor of a boat connects to whatever it's anchoring to.
+        The main attribute you need to include in the a tag is the href="" attribute.
+        href stands for hypertext reference.
+        Inside the attribute we include the website we want this link to go to.
+        URL stands for Universal Resource Locator. This acts as an adress that'll give you the location or file of the webpage you're trying to load.
+        Another atribute inside the a tag is the target attribute.
+        It controls wether the link opens the website in the same tab, a different tab or a different window.
+        By default, the browser will load the page in the same tab.-->
+        <a href="https://www.google.com" target="_blank">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</a><br>
+         
+        Vestibulum vel ante sit amet purus finibus tempus a eu nisl.
+        Vestibulum quis mattis sem.
+        Vivamus condimentum turpis et orci cursus, a suscipit est suscipit.
+        <br>
+
+        <!--The img tag takes a source attribute and displays an image.
+        You can also add a border attribute although it's not commonly used anymore.-->
+        <img src="http://via.placeholder.com/350x150" border="10">
+
+        <!--The unordered list tag ul, makes a bulleted list-->
+        <ul>
+            <li>Watermelon</li>
+            <li>Pear</li>
+            <li>Blueberry</li>
+            <li>Strawberry</li>
+        </ul>
+
+        <!--table tagtable, table row tr, table header th, table data td; it can have some styling attributes.
+        You can span a table cell several cell wide using the colspan attribute.-->
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th></th>
+                <th>Month</th>
+                <th>Rent</th>
+                <th colspan="2">Utilities</th>
+                <th>Groceries</th>
+                <th>Eating out</th>
+                <th>Entertainment</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Spring</td>
+                <td>May</td>
+                <td>$6000</td>
+                <td>$100</td>
+                <td>$500</td>
+                <td>$4000</td>
+                <td>$1500</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>June</td>
+                <td>$6000</td>
+                <td>$100</td>
+                <td>$500</td>
+                <td>$4000</td>
+                <td>$1500</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>$6000</td>
+                <td>$100</td>
+                <td>$500</td>
+                <td>$4000</td>
+                <td>$1500</td>
+                <td>$1000</td>
+            </tr>
+        </table>
+    </body>
+</html>
+

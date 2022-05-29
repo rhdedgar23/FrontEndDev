@@ -1,0 +1,14 @@
+ html {
+     font-size: 100%; //more accesible; lets the user control de zoom level in the browser
+     box-sizing: border-box; //makes the size of elements include padding in the final width
+ }
+
+ *, *::before, *::after { //for all elements, using the before and after pseudo-elements; they inherit the box-sizing from the html element
+     box-sizing: inherit;
+ }
+
+ body {
+     margin: 0;
+     padding: 0;
+     line-height: 1.3;
+    }

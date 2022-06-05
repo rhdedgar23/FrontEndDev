@@ -12,9 +12,9 @@
   type specifies the media type of the linked doc
   sizes specifies the size of the linked resource. Only for rel="icon"-->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"><!--embedded fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/app/scss/style.css"><!--all of our final css files in dist folder-->
   
@@ -26,26 +26,34 @@
   </style>
 </head>
 <body>
-
-  <header>
-    <nav class="flex flex-jc-sb">
-      <a href="/" class="logo"><!--asume it links to the homepage. It's the relative equivalent of an absolute path.
+  <header class="header">
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <a href="/" class="header__logo"><!--asume it links to the homepage. It's the relative equivalent of an absolute path.
       For example, if we are in http://stackoverflow.com/foobar
       it will link to http://stackoverflow.com/-->
         <img src="images/logo.svg" alt="Easybank"/>
       </a>
 
-      <a href="#" class="hamburger"><!--for the hamburger menu-->
+      <a href="#" class="header__menu hide-for-desktop"><!--for the hamburger menu.
+      href="#" means it links to the top of the page-->
+        <span></span>
+        <span></span>
         <span></span>
       </a>
-    </nav>
+
+      <div class="header__links hide-for-mobile">
+        <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a><a href="#">Blog</a><a href="#">Careers</a>
+      </div>
+
+      <button type="button" class="header__button hide-for-mobile">Request Invite</button>
+    </nav> 
    
   </header>
-  Home
-  About
-  Contact
-  Blog
-  Careers
+  
+  
+  
+  
+  
 
   Request Invite
 

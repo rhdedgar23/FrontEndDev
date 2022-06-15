@@ -1,0 +1,39 @@
+@keyframes fade-in{//The display propertie is one of the properties that cant be animated
+    
+    from{
+        opacity: 0;
+        visibility: hidden;
+    }
+    1%{
+        opacity: 0;
+        visibility: visible;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+
+    from{
+        opacity: 1;
+        visibility: visible;
+    }
+    99%{
+        opacity: 0;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+//helper classes
+.fade-in{
+    animation: fade-in 300ms ease-in-out forwards;
+}
+
+.fade-out{
+    animation: fade-out 300ms ease-in-out forwards;
+}

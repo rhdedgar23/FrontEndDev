@@ -1,7 +1,9 @@
 .header{
     
     .overlay{
+
         opacity: 0;
+        visibility: hidden;
         position: fixed;
         top: 3.75rem;
         right: 0px;
@@ -104,7 +106,9 @@
     }
 
     &__menuWindow{
-
+        
+        opacity: 0;
+        visibility: hidden;
         position: absolute;
         background: $white;
         //margin: 0px 1.5rem;

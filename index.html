@@ -25,12 +25,14 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
   <header class="header">
 
     <div class="overlay"></div>
     
     <nav class="flex flex-jc-sb flex-ai-c generalContainer">
+      
       <a href="/" class="header__logo"><!--asume it links to the homepage. It's the relative equivalent of an absolute path.
       For example, if we are in http://stackoverflow.com/foobar
       it will link to http://stackoverflow.com/-->
@@ -47,13 +49,13 @@
       <div class="header__links hide-for-mobile"> <!--the double underscore after header is called the BEM approach to sass style. 
       It stands for Block Element Method-->
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
+        <a href="/">About</a>
+        <a href="/">Contact</a>
+        <a href="/">Blog</a>
+        <a href="/">Careers</a>
       </div>
 
-      <button type="button" class="header__button hide-for-mobile">Request Invite</button>
+      <a href="/" class="hide-for-mobile"><button type="button" class="header__button hide-for-mobile" >Request Invite</button></a>
     </nav> 
 
     <div class="header__menuWindow generalContainer"> 
@@ -66,19 +68,31 @@
    
   </header>
   
+  <section class="hero">
+    
+    <div class="hero__image"></div>
+
+    <div class="hero__text">
+
+      <h1>Next generation digital banking</h1>
+      <p>
+        Take your financial life online. Your Easybank account will be a one-stop-shop 
+        for spending, saving, budgeting, investing, and much more.
+      </p>
+      <a href="/"><button type="button">Request Invite</button></a>
+    </div>
+  </section>
   
   
   
   
   
-  Request Invite
 
 
 
-  Next generation digital banking
 
-  Take your financial life online. Your Easybank account will be a one-stop-shop 
-  for spending, saving, budgeting, investing, and much more.
+  
+
 
   Request Invite
 

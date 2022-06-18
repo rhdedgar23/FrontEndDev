@@ -100,14 +100,6 @@
         }
     }
 
-    &__button{
-        transition: opacity 300ms ease-in-out;
-
-        &:hover{
-            opacity: 0.65;
-        }
-    }
-
     &__menuWindow{
         
         opacity: 0;

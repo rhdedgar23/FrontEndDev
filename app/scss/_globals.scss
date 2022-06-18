@@ -21,6 +21,10 @@ body {//reset rules
     }
 }
 
+h1, h2, h3{
+    margin-top: 0px;
+}
+
 a, a:visited, a:hover{
     text-decoration: none;
     color: $grayishBlue;
@@ -28,8 +32,10 @@ a, a:visited, a:hover{
 
 //Spacing
 .generalContainer{
-    padding-left: 1.5rem;
+    padding-top: 2.25rem;
     padding-right: 1.5rem;
+    padding-bottom: 2.25rem;
+    padding-left: 1.5rem;
 }
 
 //Flexbox
@@ -52,6 +58,7 @@ a, a:visited, a:hover{
 
 //Buttons
 button, .button{
+    display: inline-block;
     padding: 0.875rem 2.875rem;
     background: linear-gradient(to right, $limeGreen, $brightCyan);
     border: 0;
@@ -59,6 +66,12 @@ button, .button{
     cursor: pointer;
     color: $white;
     font-weight: 700;
+    font-size: $font-small;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover{
+        opacity: 0.70;
+    }
 }
 
 //Visibility

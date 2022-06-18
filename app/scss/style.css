@@ -20,14 +20,20 @@ body.noScroll {
   overflow: hidden;
 }
 
+h1, h2, h3 {
+  margin-top: 0px;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
   color: hsl(233deg, 8%, 62%);
 }
 
 .generalContainer {
-  padding-left: 1.5rem;
+  padding-top: 2.25rem;
   padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -44,6 +50,7 @@ a, a:visited, a:hover {
 }
 
 button, .button {
+  display: inline-block;
   padding: 0.875rem 2.875rem;
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
   border: 0;
@@ -51,6 +58,11 @@ button, .button {
   cursor: pointer;
   color: hsl(0deg, 0%, 100%);
   font-weight: 700;
+  font-size: 0.825rem;
+  transition: opacity 300ms ease-in-out;
+}
+button:hover, .button:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 63.9375em) {
@@ -134,12 +146,6 @@ button, .button {
 }
 .header__links a:hover::before {
   opacity: 1;
-}
-.header__button {
-  transition: opacity 300ms ease-in-out;
-}
-.header__button:hover {
-  opacity: 0.65;
 }
 .header__menuWindow {
   opacity: 0;
@@ -227,6 +233,12 @@ button, .button {
           animation: fade-out 200ms ease-in-out forwards;
 }
 
+@media (min-width: 64em) {
+  .hero {
+    display: flex;
+    align-items: center;
+  }
+}
 .hero__image {
   position: relative;
   background-image: url("/images/bg-intro-mobile.svg");
@@ -234,6 +246,15 @@ button, .button {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    height: 41rem;
+    flex: 1;
+    order: 2;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-position: left center;
+  }
 }
 .hero__image::before {
   content: "";
@@ -248,9 +269,20 @@ button, .button {
 .hero__text {
   text-align: center;
 }
+@media (min-width: 64em) {
+  .hero__text {
+    flex: 1;
+    order: 1;
+  }
+}
 .hero__text h1 {
   font-weight: 300;
   font-size: 2.3125rem;
   line-height: 1.15;
   color: hsl(233deg, 26%, 24%);
+  margin-bottom: 1.5rem;
+}
+.hero__text p {
+  line-height: 1.5rem;
+  margin-bottom: 2.25rem;
 }/*# sourceMappingURL=style.css.map */

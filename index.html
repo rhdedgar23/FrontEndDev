@@ -31,7 +31,7 @@
 
     <div class="overlay"></div>
     
-    <nav class="flex flex-jc-sb flex-ai-c generalContainer">
+    <nav class="flex flex-jc-sb flex-ai-c generalContainer--paddingAll">
       
       <a href="/" class="header__logo"><!--asume it links to the homepage. It's the relative equivalent of an absolute path.
       For example, if we are in http://stackoverflow.com/foobar
@@ -69,19 +69,25 @@
   </header>
   
   <section class="hero">
-    
-    <div class="hero__image"></div>
 
-    <div class="hero__text generalContainer">
+    <div class="hero__section generalContainer">
 
-      <h1>Next generation digital banking</h1>
-      <p>
-        Take your financial life online. Your Easybank account will be a one-stop-shop 
-        for spending, saving, budgeting, investing, and much more.
-      </p>
-      <a href="/"><button type="button">Request Invite</button></a>
+      <div class="hero__image ">
+        <img src="/images/image-mockups.png" alt="mockups" class="hide-for-mobile">
+      </div>
+
+      <div class="hero__text generalContainer--paddingAll">
+        <h1>Next generation digital banking</h1>
+        <p>
+          Take your financial life online. Your Easybank account will be a one-stop-shop 
+          for spending, saving, budgeting, investing, and much more.
+        </p>
+        <a href="/"><button type="button">Request Invite</button></a>
+      </div>
     </div>
   </section>
+  <section id="filler"></section>
+  
   
   
   

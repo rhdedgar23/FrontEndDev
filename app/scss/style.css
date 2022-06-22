@@ -19,6 +19,11 @@ body {
 body.noScroll {
   overflow: hidden;
 }
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
 
 h1, h2, h3 {
   margin-top: 0px;
@@ -30,10 +35,34 @@ a, a:visited, a:hover {
 }
 
 .generalContainer {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.generalContainer--paddingAll {
   padding-top: 2.25rem;
   padding-right: 1.5rem;
   padding-bottom: 2.25rem;
   padding-left: 1.5rem;
+}
+.generalContainer--paddingX {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.generalContainer--paddingY {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.generalContainer--paddingTop {
+  padding-top: 2.25rem;
+}
+.generalContainer--paddingBottom {
+  padding-bottom: 2.25rem;
+}
+.generalContainer--paddingLeft {
+  padding-left: 1.5rem;
+}
+.generalContainer--paddingRight {
+  padding-right: 1.5rem;
 }
 
 .flex {
@@ -81,6 +110,7 @@ button:hover, .button:hover {
   opacity: 0;
   visibility: hidden;
   position: fixed;
+  z-index: 1;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -101,6 +131,7 @@ button:hover, .button:hover {
 }
 .header nav {
   position: relative;
+  z-index: 1;
   background-color: hsl(0deg, 0%, 100%);
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
@@ -151,6 +182,7 @@ button:hover, .button:hover {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  z-index: 2;
   background: hsl(0deg, 0%, 100%);
   margin-top: 1.5rem;
   padding: 1.625rem;
@@ -233,30 +265,26 @@ button:hover, .button:hover {
           animation: fade-out 200ms ease-in-out forwards;
 }
 
+.hero {
+  position: relative;
+  background-color: hsl(0deg, 0%, 98%);
+}
 @media (min-width: 64em) {
-  .hero {
+  .hero .generalContainer {
     display: flex;
     align-items: center;
   }
 }
 .hero__image {
   position: relative;
+  z-index: 0;
   background-image: url("/images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
 }
-@media (min-width: 64em) {
-  .hero__image {
-    height: 41rem;
-    flex: 1;
-    order: 2;
-    background-image: url("/images/bg-intro-desktop.svg");
-    background-position: left center;
-  }
-}
-.hero__image::before {
+.hero__image::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -264,15 +292,38 @@ button:hover, .button:hover {
   background-image: url("/images/image-mockups.png");
   background-size: 90%;
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center center;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    flex: 3;
+    order: 2;
+    min-height: 30rem;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 0% 70%;
+  }
+  .hero__image::after {
+    content: none;
+  }
+}
+.hero img {
+  position: absolute;
+  content: "";
+  width: 90%;
+  left: 10rem;
+  bottom: -10rem;
+  max-width: 90%;
 }
 .hero__text {
   text-align: center;
 }
 @media (min-width: 64em) {
   .hero__text {
-    flex: 1;
+    flex: 2;
     order: 1;
+    text-align: left;
   }
 }
 .hero__text h1 {
@@ -281,6 +332,11 @@ button:hover, .button:hover {
   line-height: 1.15;
   color: hsl(233deg, 26%, 24%);
   margin-bottom: 1.5rem;
+}
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
 }
 .hero__text p {
   line-height: 1.5rem;

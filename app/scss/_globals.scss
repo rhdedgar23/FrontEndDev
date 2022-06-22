@@ -19,6 +19,10 @@ body {//reset rules
     &.noScroll{
         overflow: hidden;
     }
+
+    @include breakpoint-up(large){
+        font-size: $font-med;
+    }
 }
 
 h1, h2, h3{
@@ -32,10 +36,42 @@ a, a:visited, a:hover{
 
 //Spacing
 .generalContainer{
-    padding-top: 2.25rem;
-    padding-right: 1.5rem;
-    padding-bottom: 2.25rem;
-    padding-left: 1.5rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    
+
+    &--paddingAll{
+        padding-top: 2.25rem;
+        padding-right: 1.5rem;
+        padding-bottom: 2.25rem;
+        padding-left: 1.5rem;
+    }
+
+    &--paddingX{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    &--paddingY{
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    &--paddingTop{
+        padding-top: 2.25rem;
+    }
+
+    &--paddingBottom{
+        padding-bottom: 2.25rem;
+    }
+
+    &--paddingLeft{
+        padding-left: 1.5rem;
+    }
+
+    &--paddingRight{
+        padding-right: 1.5rem;
+    }
 }
 
 //Flexbox

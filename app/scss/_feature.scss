@@ -1,0 +1,44 @@
+.feature{
+
+    &__intro{
+
+        @include breakpoint-up(large){
+            width: 55%;
+        }
+    }
+
+    &__grid{
+        
+        @include breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+            //if wrap is turned off, all the child items will be fit to one row
+        }
+    }
+
+    &__item{
+        padding: 0.9375rem;
+
+        @include breakpoint-up(medium){
+            flex: 1 0 50%;//flex grow - flex shrink - flex basis
+            //flex grow = 1 means its allow to grow to fill the space
+            //flex shrink=0 means the item isnt allow to shrink to less than what the flex basis is
+            //flex basis is the default width the item is going to have
+        }
+        @include breakpoint-up(large){
+            flex: 1;
+        }
+    }
+
+    &__icon{
+
+    }
+
+    &__title{
+
+    }
+
+    &__description{
+
+    }
+}

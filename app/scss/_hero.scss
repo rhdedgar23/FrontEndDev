@@ -55,9 +55,9 @@
   img{
     position:absolute;
     content: "";
-    width: 90%;
+    width: 87.5%;
     left: 10rem;
-    bottom: -10rem;
+    bottom: -7rem;
     max-width: 90%;
   }
 
@@ -69,23 +69,6 @@
       flex: 2;
       order: 1;
       text-align: left;
-    }
-    
-    h1{
-        font-weight: 300;
-        font-size: 2.3125rem;
-        line-height: 1.15;
-        color: $darkBlue;
-        margin-bottom: 1.5rem;
-
-        @include breakpoint-up(large){
-          font-size: $font-xlarge;
-        }
-    }
-
-    p{
-      line-height: 1.5rem;
-      margin-bottom: 2.25rem;
     }
   }   
 }

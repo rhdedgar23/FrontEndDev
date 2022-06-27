@@ -1,0 +1,62 @@
+.articles{
+    background-color: $lightGrayishBlue;
+}
+
+.article{
+
+    &__content{
+
+    }
+
+    &__grid{
+        //for a grid display, you have to set the display and also the template
+        //flexbox is more of a content-first approach
+        //for grid display, you need to set up the number of columns and/or rows
+        //display: grid;
+        //grid-template-columns: 1fr;
+        //fr means a fraction unit
+        //its a general ration unit. Itll take up as much space as possible 
+        //and if theres more than one child item in the column or row, itll divide the 
+        //space up depending on the number of childs
+        //1fr is kind of like a default
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+        //auto-fit is a property that lets grid decide how many columnns there are going to be
+        //minmax gives the grid the control over how wide things will be
+
+        // @include breakpoint-up(medium){
+        //     grid-template-columns: repeat(2, 1fr);//2 columns each with 1fr width
+        
+        // }
+
+        // @include breakpoint-up(large){
+        //     grid-template-columns: repeat(4, 1fr);
+        // }
+
+    }
+
+    &__item{
+
+    }
+
+    &__image{
+
+    }
+
+    &__text{
+
+    }
+
+    &__author{
+
+    }
+
+    &__title{
+
+    }
+
+    &__description{
+
+    }
+}

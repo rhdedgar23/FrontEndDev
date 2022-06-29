@@ -12,51 +12,68 @@
         //for a grid display, you have to set the display and also the template
         //flexbox is more of a content-first approach
         //for grid display, you need to set up the number of columns and/or rows
-        //display: grid;
-        //grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
+
         //fr means a fraction unit
         //its a general ration unit. Itll take up as much space as possible 
         //and if theres more than one child item in the column or row, itll divide the 
         //space up depending on the number of childs
         //1fr is kind of like a default
 
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+        //display: grid;
+        //grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
         //auto-fit is a property that lets grid decide how many columnns there are going to be
         //minmax gives the grid the control over how wide things will be
 
-        // @include breakpoint-up(medium){
-        //     grid-template-columns: repeat(2, 1fr);//2 columns each with 1fr width
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);//2 columns each with 1fr width
         
-        // }
+        }
 
-        // @include breakpoint-up(large){
-        //     grid-template-columns: repeat(4, 1fr);
-        // }
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4, 1fr);
+        }
 
     }
 
     &__item{
-
+        border-radius: 0.3125rem;
+        overflow: hidden;
     }
 
     &__image{
-
+        height: 12.5rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
     &__text{
+        background-color: $white;
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+        color: $grayishBlue;
 
+        @include breakpoint-up(medium){
+            padding: 1.875rem 1.5625rem;
+        }
     }
 
     &__author{
-
+        font-size: 0.625rem;
+        margin-bottom: 1rem;
     }
 
     &__title{
+        font-size: 1.0625rem;
+        line-height: 1.2;
+        color: $darkBlue;
+        margin-bottom: 1rem;
 
     }
 
     &__description{
-
+        font-size: 0.8125rem;
     }
 }

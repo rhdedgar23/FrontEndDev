@@ -480,13 +480,13 @@ button:hover, .button:hover {
 }
 .article__author {
   font-size: 0.625rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 .article__title {
   font-size: 1.0625rem;
   line-height: 1.2;
   color: hsl(233deg, 26%, 24%);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .article__description {
   font-size: 0.8125rem;

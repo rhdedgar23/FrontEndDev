@@ -4,9 +4,9 @@
 
 .article{
 
-    &__content{
+    // &__content{
 
-    }
+    // }
 
     &__grid{
         //for a grid display, you have to set the display and also the template
@@ -41,6 +41,17 @@
     &__item{
         border-radius: 0.3125rem;
         overflow: hidden;
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+        //1st parameter in box-shadow: horizontal position
+        //2nd par - vertical position
+        //3rd defuse intensity
+        //4th color of the shadow - last paramater in rgba is the opacity (closer to 0 is transparent)
+        transition: all 150ms ease-in-out;  
+
+        &:hover{
+            transform: scale(1.05);
+        }
     }
 
     &__image{
@@ -51,7 +62,6 @@
     }
 
     &__text{
-        background-color: $white;
         padding: 1.875rem 1.875rem 2.5rem 1.875rem;
         color: $grayishBlue;
 

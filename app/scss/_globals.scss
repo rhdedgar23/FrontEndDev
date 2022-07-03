@@ -16,6 +16,7 @@ body {//reset rules
     color: $grayishBlue;
     line-height: 1.3;
     min-height: 300vh;
+    overflow-x: hidden;
 
     &.noScroll{
         overflow: hidden;

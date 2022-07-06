@@ -510,6 +510,7 @@ button:hover, .button:hover {
     grid-template-columns: repeat(3, 1fr) 2fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "logo links1 links2 cta" "social links1 links2 cta";
+    justify-items: start;
   }
 }
 .footer a {
@@ -517,15 +518,21 @@ button:hover, .button:hover {
 }
 .footer__logo {
   display: inline-block;
-  margin-bottom: 1.875rem;
+}
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.875rem;
+  }
 }
 @media (min-width: 64em) {
   .footer__logo {
     grid-area: logo;
   }
 }
-.footer__social {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.875rem;
+  }
 }
 @media (min-width: 64em) {
   .footer__social {
@@ -544,12 +551,19 @@ button:hover, .button:hover {
   align-items: center;
 }
 @media (min-width: 64em) {
+  .footer__links {
+    align-items: start;
+  }
+}
+@media (min-width: 64em) {
   .footer__links.column1 {
     grid-area: links1;
   }
 }
-.footer__links.column2 {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__links.column2 {
+    margin-bottom: 1.875rem;
+  }
 }
 @media (min-width: 64em) {
   .footer__links.column2 {
@@ -562,8 +576,12 @@ button:hover, .button:hover {
 @media (min-width: 64em) {
   .footer__cta {
     grid-area: cta;
+    text-align: right;
+    justify-self: end;
   }
 }
-.footer__cta button {
-  margin-bottom: 1.875rem;
+@media (max-width: 63.9375em) {
+  .footer__cta button {
+    margin-bottom: 1.875rem;
+  }
 }/*# sourceMappingURL=style.css.map */

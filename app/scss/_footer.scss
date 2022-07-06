@@ -12,6 +12,8 @@
         grid-template-areas: 
             "logo links1 links2 cta" //represnetation of the first row
             "social links1 links2 cta";//and second row
+        justify-items: start;//aligns items to the left 
+
     }
 
     a{
@@ -20,7 +22,11 @@
 
     &__logo{
         display: inline-block;
-        margin-bottom: 1.875rem;
+        
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }        
 
         @include breakpoint-up(large){
             grid-area: logo;
@@ -28,7 +34,10 @@
     }
 
     &__social{
-        margin-bottom: 1.875rem;
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        } 
 
         @include breakpoint-up(large){
             grid-area: social;
@@ -49,6 +58,10 @@
         flex-direction: column;
         align-items: center;
 
+        @include breakpoint-up(large){
+            align-items: start;
+        }
+
         &.column1{
             @include breakpoint-up(large){
                 grid-area: links1;
@@ -56,7 +69,10 @@
         }
 
         &.column2{
-            margin-bottom: 1.875rem;
+
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            } 
 
             @include breakpoint-up(large){
                 grid-area: links2;
@@ -72,10 +88,15 @@
 
         @include breakpoint-up(large){
             grid-area: cta;
+            text-align: right;
+            justify-self: end;
         }
 
         button{
-            margin-bottom: 1.875rem;
+
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            } 
         }
     }
 

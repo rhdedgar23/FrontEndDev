@@ -5,15 +5,16 @@
     padding: 2.5rem;
     text-align: center;
 
-    @include breakpoint-up(large){
-        display: grid;  
-        grid-template-columns: repeat(3, 1fr) 2fr;//firs three columns are 1fr and the last column is 2fr
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-            "logo links1 links2 cta" //represnetation of the first row
-            "social links1 links2 cta";//and second row
-        justify-items: start;//aligns items to the left 
-
+    .container{
+        @include breakpoint-up(large){
+            display: grid;  
+            grid-template-columns: repeat(3, 1fr) 2fr;//firs three columns are 1fr and the last column is 2fr
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 
+                "logo links1 links2 cta" //represnetation of the first row
+                "social links1 links2 copyright";//and second row
+            justify-items: start;//aligns items to the left 
+        }
     }
 
     a{
@@ -41,10 +42,20 @@
 
         @include breakpoint-up(large){
             grid-area: social;
+            align-self: end;
         }
 
         a{
            display: inline-block; 
+           height: 1.25rem;
+
+           svg path{
+            transition: fill 150ms ease-in-out;
+           }
+
+            &:hover svg path{
+                fill: $limeGreen;
+            }
         }
 
         a:not(:last-child){
@@ -57,8 +68,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 0.9375rem;
 
         @include breakpoint-up(large){
+            justify-content: space-between;
             align-items: start;
         }
 
@@ -81,6 +94,12 @@
 
         a{
             line-height: 2.25;
+            transition: color 150ms ease-in-out;
+            
+            &:hover{
+                color: $limeGreen;
+            }
+                
         }
     }
 
@@ -100,7 +119,14 @@
         }
     }
 
-    // &__copyright{
+    &__copyright{
+        font-size: 0.9375rem;
+        color: $grayishBlue;
 
-    // }
+        @include breakpoint-up(large){
+            grid-area: copyright;
+            align-self: end;
+            justify-self: end;
+        }
+    }
 }

@@ -132,6 +132,7 @@ a, a:visited, a:hover {
 }
 
 button, .button {
+  position: relative;
   display: inline-block;
   padding: 0.875rem 2.875rem;
   background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
@@ -142,9 +143,21 @@ button, .button {
   font-weight: 700;
   font-size: 0.825rem;
   transition: opacity 300ms ease-in-out;
+  overflow: hidden;
 }
-button:hover, .button:hover {
-  opacity: 0.7;
+button::before, .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+button:hover::before, .button:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 63.9375em) {
@@ -505,11 +518,11 @@ button:hover, .button:hover {
   text-align: center;
 }
 @media (min-width: 64em) {
-  .footer {
+  .footer .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr) 2fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "logo links1 links2 cta" "social links1 links2 cta";
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
     justify-items: start;
   }
 }
@@ -537,10 +550,18 @@ button:hover, .button:hover {
 @media (min-width: 64em) {
   .footer__social {
     grid-area: social;
+    align-self: end;
   }
 }
 .footer__social a {
   display: inline-block;
+  height: 1.25rem;
+}
+.footer__social a svg path {
+  transition: fill 150ms ease-in-out;
+}
+.footer__social a:hover svg path {
+  fill: hsl(136deg, 65%, 51%);
 }
 .footer__social a:not(:last-child) {
   margin-right: 1rem;
@@ -549,9 +570,11 @@ button:hover, .button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 0.9375rem;
 }
 @media (min-width: 64em) {
   .footer__links {
+    justify-content: space-between;
     align-items: start;
   }
 }
@@ -572,6 +595,10 @@ button:hover, .button:hover {
 }
 .footer__links a {
   line-height: 2.25;
+  transition: color 150ms ease-in-out;
+}
+.footer__links a:hover {
+  color: hsl(136deg, 65%, 51%);
 }
 @media (min-width: 64em) {
   .footer__cta {
@@ -583,5 +610,16 @@ button:hover, .button:hover {
 @media (max-width: 63.9375em) {
   .footer__cta button {
     margin-bottom: 1.875rem;
+  }
+}
+.footer__copyright {
+  font-size: 0.9375rem;
+  color: hsl(233deg, 8%, 62%);
+}
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    align-self: end;
+    justify-self: end;
   }
 }/*# sourceMappingURL=style.css.map */
